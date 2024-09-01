@@ -1,0 +1,150 @@
+// Variables
+$font-family: 'Poppins', sans-serif;
+$background-color: #252525;
+$gradient-background: linear-gradient(135deg, #00c3fe, #5b548a);
+$text-color: #fff;
+$input-background: #ebfffc;
+$input-text-color: #555;
+$button-hover-color: #45a049;
+$border-radius: 20px;
+$input-height: 60px;
+$input-radius: 30px;
+$button-size: 60px;
+$icon-size: 40px;
+$weather-icon-size: 170px;
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+}
+
+// Card Styles
+.card {
+  width: 95%;
+  max-width: 480px;
+  background: $gradient-background;
+  color: $text-color;
+  margin: 100px auto 0;
+  border-radius: $border-radius;
+  padding: 25px;
+  text-align: center;
+}
+
+// Search Styles
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    border: 0;
+    outline: 0;
+    background: $input-background;
+    color: $input-text-color;
+    padding: 10px 25px;
+    height: $input-height;
+    border-radius: $input-radius;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+    background: $input-background;
+    border-radius: 50%;
+    width: $button-size;
+    height: $button-size;
+    cursor: pointer;
+
+    img {
+      width: 16px;
+    }
+  }
+}
+
+// Weather Icon Styles
+.weather-icon {
+  width: $weather-icon-size;
+  margin-top: 30px;
+}
+
+// Weather Info Styles
+.weather {
+  display: none;
+
+  > h1 {
+    font-size: 60px;
+    font-weight: 500;
+  }
+
+  > h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
+
+// Details Styles
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 50px;
+
+  .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    img {
+      width: $icon-size;
+      margin-right: 10px;
+    }
+  }
+
+  .humidity, 
+  .wind {
+    font-size: 28px;
+    margin-top: -6px;
+  }
+}
+
+// Error Message Styles
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+// Toggle Unit Button Styles
+.toggle-unit {
+  background-color: $input-background;
+  border: none;
+  color: $input-text-color;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: $input-radius;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}
